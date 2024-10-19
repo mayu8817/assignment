@@ -1,0 +1,25 @@
+CREATE TABLE rules (
+    id SERIAL PRIMARY KEY,
+    rule_string TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE attributes (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    type VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE json_data (
+            id SERIAL PRIMARY KEY,
+            data JSON NOT NUll);
+            {
+                "key": "value",
+                "aaray": [1,2,3],
+                "object":{
+                    "nested_key":nested_value""
+                }
+            }
+
+
