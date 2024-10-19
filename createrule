@@ -48,3 +48,17 @@ def evaluate_operator(operator, left_result, right_result):
         return left_result and right_result
     elif operator == "OR":
         return left_result or right_result
+    
+    
+# Sample test case for create_rule
+rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
+ast1 = create_rule(rule1)
+
+# Sample test case for combine_rules
+rule2 = "((age > 30 AND department = 'Marketing')) AND (salary > 20000 OR experience > 5)"
+combined_ast = combine_rules([rule1, rule2])
+
+# Sample JSON data for evaluation
+data = {"age": 35, "department": "Sales", "salary": 60000, "experience": 3}
+result = evaluate_rule(combined_ast, data)
+print(result)  # Expected output: True or False based on the rules
