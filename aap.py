@@ -85,4 +85,3 @@ if __name__ == "__main__":
     # Evaluate the combined rule
     result = evaluate_rule(combined_ast, data)
     print(result)  # Expected output: True or False based on the rules
-    
